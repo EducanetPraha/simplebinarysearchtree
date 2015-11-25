@@ -1,4 +1,5 @@
 import org.junit.Before;
+import org.junit.Test;
 
 import static org.junit.Assert.*;
 
@@ -48,6 +49,14 @@ public class TreeNodeTest {
         assertEquals(6, newBig.depth());
     }
 
+    @Test
+    public void testSelect() throws Exception {
+        assertEquals(10, testTree.select(0)); // smallest
+        assertEquals(15, testTree.select(1)); // second smallest
+        assertEquals(50, testTree.select(3));
+        assertEquals(60, testTree.select(4));
+        assertEquals(150, testTree.select(6));
+    }
 
     public static TreeNode getTestTree() {
         /**

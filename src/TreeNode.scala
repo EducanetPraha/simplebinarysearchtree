@@ -22,4 +22,11 @@ abstract class TreeNode {
    * @return new tree with newVal on appropriate place
    */
   def add(newVal: Int): TreeNode
+
+  /**
+   * Returns i'th element for the tree. For example for i=0 returns smallest element in a tree
+   * @param i index of element
+   * @return element on given index
+   */
+  def select(i: Int): Int
 }
