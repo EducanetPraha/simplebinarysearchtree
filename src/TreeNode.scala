@@ -24,6 +24,12 @@ abstract class TreeNode {
   def add(newVal: Int): TreeNode
 
   /**
+   *
+   * @return returns count of Some elements is the tree
+   */
+  def count: Int
+
+  /**
    * Returns i'th element for the tree. For example for i=0 returns smallest element in a tree
    * @param i index of element
    * @return element on given index

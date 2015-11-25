@@ -16,5 +16,8 @@ class Some(val v: Int, val l: TreeNode, val r: TreeNode) extends TreeNode {
     else ???
   }
 
+  override def count: Int = ???
+
   override def select(i: Int): Int = ???
+
 }

@@ -50,12 +50,22 @@ public class TreeNodeTest {
     }
 
     @Test
+    public void testCount() throws Exception {
+        assertEquals(7, testTree.count());
+    }
+
+    @Test
     public void testSelect() throws Exception {
         assertEquals(10, testTree.select(0)); // smallest
         assertEquals(15, testTree.select(1)); // second smallest
-        assertEquals(50, testTree.select(3));
-        assertEquals(60, testTree.select(4));
+        assertEquals(50, testTree.select(2));
+        assertEquals(60, testTree.select(3));
         assertEquals(150, testTree.select(6));
+    }
+
+    @Test(expected=IndexOutOfBoundsException.class)
+    public void testSelectNonExisting() throws Exception {
+        testTree.select(7);
     }
 
     public static TreeNode getTestTree() {
